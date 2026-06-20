@@ -1,0 +1,20 @@
+name: Hello
+on:
+    push:
+        branches: [main]
+
+jobs:
+    greet:
+      runs-on: ubuntu-latest
+      steps:
+        - name: hello
+          run: echo "hello from Github Actions!"
+
+        - name: Show date
+          run: date
+        
+        - name: list files
+          run: ls -la
+        
+        - name: show kernel info
+          run: uname -a
